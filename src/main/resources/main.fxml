@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="619.0" prefWidth="353.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <Text layoutX="20.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vertical Axis Rate:" wrappingWidth="76.5367431640625" />
+      <Text layoutX="232.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horizontal Axis Rate:" wrappingWidth="90.13671874999994" />
+      <ComboBox fx:id="verticalAxis_rates" layoutX="20.0" layoutY="243.0" prefHeight="26.0" prefWidth="58.0" />
+      <ComboBox fx:id="horizontalAxis_rates" layoutX="265.0" layoutY="243.0" prefHeight="26.0" prefWidth="58.0" />
+      <Text layoutX="15.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vertical Axis Pos." wrappingWidth="110.13671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="179.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horizontal Axis Pos." wrappingWidth="141.3367462158203">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="verticalAxisPositionDisplay" layoutX="7.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="141.3367462158203">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Text>
+      <Text fx:id="horizontalAxisPositionDisplay" layoutX="204.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="141.3367462158203">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Text>
+      <Button fx:id="upArrow_Btn" layoutX="147.0" layoutY="284.0" mnemonicParsing="false" onMousePressed="#onMouse_Pressed_Handler" onMouseReleased="#onMouse_Released_Handler" prefHeight="51.0" prefWidth="58.0" text="↑">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="rightArrow_Btn" layoutX="216.0" layoutY="342.0" mnemonicParsing="false" onMousePressed="#onMouse_Pressed_Handler" onMouseReleased="#onMouse_Released_Handler" prefHeight="51.0" prefWidth="58.0" text="→">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="leftArrow_Btn" layoutX="78.0" layoutY="342.0" mnemonicParsing="false" onMousePressed="#onMouse_Pressed_Handler" onMouseReleased="#onMouse_Released_Handler" prefHeight="51.0" prefWidth="58.0" text="←">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="downArrow_Btn" layoutX="147.0" layoutY="399.0" mnemonicParsing="false" onMousePressed="#onMouse_Pressed_Handler" onMouseReleased="#onMouse_Released_Handler" prefHeight="51.0" prefWidth="58.0" text="↓">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="downLeftArrow_Btn" layoutX="78.0" layoutY="399.0" mnemonicParsing="false" onMousePressed="#onMouse_Pressed_Handler" onMouseReleased="#onMouse_Released_Handler" prefHeight="51.0" prefWidth="58.0" text="↙">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="upLeftArrow_Btn" layoutX="78.0" layoutY="284.0" mnemonicParsing="false" onMousePressed="#onMouse_Pressed_Handler" onMouseReleased="#onMouse_Released_Handler" prefHeight="51.0" prefWidth="58.0" text="↖">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="downRightArrow_Btn" layoutX="216.0" layoutY="399.0" mnemonicParsing="false" onMousePressed="#onMouse_Pressed_Handler" onMouseReleased="#onMouse_Released_Handler" prefHeight="51.0" prefWidth="58.0" text="↘">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="upRightArrow_Btn" layoutX="216.0" layoutY="284.0" mnemonicParsing="false" onMousePressed="#onMouse_Pressed_Handler" onMouseReleased="#onMouse_Released_Handler" prefHeight="51.0" prefWidth="58.0" text="↗">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TextField fx:id="VerticalAxisPosition_Go" layoutX="15.0" layoutY="513.0" prefHeight="26.0" prefWidth="50.0" />
+      <TextField fx:id="HorizontalAxisPosition_Go" layoutX="180.0" layoutY="513.0" prefHeight="26.0" prefWidth="50.0" />
+      <Text layoutX="20.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vertical Axis Position:" wrappingWidth="133.98307609558105" />
+      <Text layoutX="169.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HorizontalAxis Position:" wrappingWidth="152.53675842285156" />
+      <Button fx:id="GoBtn" layoutX="14.0" layoutY="563.0" mnemonicParsing="false" onAction="#GoBtnHandler" text="Go" />
+   </children>
+</AnchorPane>
