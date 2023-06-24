@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout Source') {
+            steps {
+                echo 'Checking out '+ GIT_BRANCH+' of source code repository '+ GIT_URL.tokenize('/.')[-2]
+                git branch: 'main', poll: false, url: 'https://github.com/rudyleiva93/Virtual-Telescope-Controller.git'
+            }
+        }
+    }
+}
