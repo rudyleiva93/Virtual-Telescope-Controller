@@ -1,11 +1,11 @@
 package controllers;
 
-import com.gluonhq.charm.glisten.control.TextField;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
@@ -224,7 +224,7 @@ public class MainController implements Initializable {
         return horizontalAxisPositionDisplay.getText();
     }
 
-    public void GoBtnHandler(ActionEvent actionEvent) {
+    public void GoBtnHandler(ActionEvent actionEvent) throws Exception {
         System.out.println("Clicked");
         vAxisRate = Integer.parseInt((String) verticalAxis_rates.getValue());
         hAxisRate = Integer.parseInt((String) horizontalAxis_rates.getValue());
