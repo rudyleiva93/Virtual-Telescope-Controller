@@ -1,4 +1,4 @@
-package controllers;
+package com.vtc.VirtualTelescopeControl;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;

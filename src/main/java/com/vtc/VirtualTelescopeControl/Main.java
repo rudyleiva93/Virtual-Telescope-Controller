@@ -1,5 +1,9 @@
 package com.vtc.VirtualTelescopeControl;
 
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +17,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        URL url = new File("C:/dev/Virtual-Telescope-Controller/src/main/resources/main.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        //Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("/main.fxml"));
         primaryStage.setTitle("Virtual Telescope Controller");
-        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("Images/celestron_icon.jpg")));
+        //primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("Images/celestron_icon.jpg")));
         Scene main = new Scene(root);
         primaryStage.setScene(main);
         primaryStage.show();
@@ -28,6 +34,6 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        launch(args);
+        Application.launch(args);
     }
 }
